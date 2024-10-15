@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
+    <h1>Book List</h1>
+
+    {% if books %}
+        <ul>
+            {% for book in books %}
+                <li>{{ book.title }} by {{ book.author }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No books available</p>
+    {% endif %}
+
+    <a href="{{ url_for('add_book') }}" class="btn btn-primary">Add Book</a>
+    {% if is_admin %}
+    <a href="{{ url_for('add_user') }}">Add User</a><br>
+    {% endif %}
+    {% if users_link %}
+    <a href="{{ users_link }}">Manage Users</a>
+    {% endif %}
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
