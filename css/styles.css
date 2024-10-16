@@ -1,0 +1,85 @@
+/* Ogólne ustawienia */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nawigacja */
+nav ul {
+    display: flex;
+    background-color: #333;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Styl dla sekcji powitalnej */
+.hero {
+    background-color: #f4f4f4;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+}
+
+/* Siatka Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+
+.grid-item {
+    background-color: #ffcc00;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.grid-item:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Formularz kontaktowy */
+.contact-form {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #ffcc00;
+}
